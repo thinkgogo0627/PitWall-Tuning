@@ -1,0 +1,31 @@
+# Python 관련
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# 환경 변수 (API KEY 절대 유출 금지)
+.env
+.env.local
+
+# IDE 설정
+.vscode/
+.idea/
+
+# --- MLOps 관련 중요 설정 ---
+
+# 1. 모델 가중치 (너무 커서 Git에 올리면 안 됨)
+models/*
+!models/.gitkeep
+
+# 2. 어댑터 저장소 (필요시 Git LFS로 관리하거나 제외)
+models/adapters/*
+
+# 3. 데이터셋 (원본 데이터 보안 및 용량 관리)
+# 필요하다면 raw 데이터는 제외하고 스크립트만 올림
+data/raw/*
+!data/raw/.gitkeep
+
+# 4. 학습 로그 (WandB 등)
+wandb/
+artifacts/
