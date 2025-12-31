@@ -29,3 +29,7 @@ data/raw/*
 # 4. 학습 로그 (WandB 등)
 wandb/
 artifacts/
+
+
+# env
+.env
